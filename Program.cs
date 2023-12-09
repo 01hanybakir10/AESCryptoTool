@@ -17,7 +17,7 @@ while (true)
     Console.WriteLine("0. Exit");
     Console.WriteLine();
     Console.Write("Enter your choice : ");
-    string choice = Console.ReadLine();
+    string? choice = Console.ReadLine();
 
     runTool rt = new();
 
@@ -48,7 +48,7 @@ public class runTool
         Console.Write("Enter string to encrypt : ");
         string? plaintStr = Console.ReadLine();
         Console.WriteLine("===============================");
-        string encStr = ch.AESencrypt(plaintStr, "", "");
+        string? encStr = ch.AESencrypt(plaintStr, "", "");
         Console.WriteLine(encStr);
         Console.WriteLine("===============================");
         return encStr;
@@ -60,7 +60,7 @@ public class runTool
         Console.Write("Enter string to decrypt : ");
         string? decStr = Console.ReadLine();
         Console.WriteLine("===============================");
-        string encStr = ch.AESdecrypt(decStr, "", "");
+        string? encStr = ch.AESdecrypt(decStr, "", "");
         Console.WriteLine(encStr);
         Console.WriteLine("===============================");
 
